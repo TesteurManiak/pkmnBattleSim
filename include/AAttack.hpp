@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sat Sep  2 22:44:53 2017 Guillaume Roux
-// Last update Sun Sep  3 15:58:01 2017 Guillaume Roux
+// Last update Sun Sep  3 16:26:33 2017 Guillaume Roux
 //
 
 #ifndef ATTACK_HPP
@@ -17,6 +17,9 @@ class Attack
 {
 protected:
   std::string _name;
+  std::string _type;
+  std::string _touch;
+  std::string _effect;
   int _power;
   int _accuracy;
   int _maxPP;
@@ -44,6 +47,18 @@ public:
   virtual int getCurrPP() const {
     return this->_currentPP;
   };
+
+  virtual std::string getType() const {
+    return this->_type;
+  };
+
+  virtual std::string getTouch() const {
+    return this->_touch;
+  }
+
+  virtual std::string getEffect() const {
+    return this->_effect;
+  }
 
   virtual Attack & operator=(Attack const &copy)
   {
