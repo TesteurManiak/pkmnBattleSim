@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sat Sep  2 23:12:15 2017 Guillaume Roux
-// Last update Sun Sep  3 16:32:51 2017 Guillaume Roux
+// Last update Sun Sep  3 16:34:37 2017 Guillaume Roux
 //
 
 #ifndef ATTACKS_HPP
@@ -75,7 +75,8 @@ public:
     this->_maxPP = 30;
     this->_currentPP = this->_maxPP;
   };
-  virtual ~Acid ();
+  virtual ~Acid (){};
 };
+Acid  acid;
 
 #endif
