@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sun Sep  3 12:58:41 2017 Guillaume Roux
-// Last update Sun Sep  3 16:08:41 2017 Guillaume Roux
+// Last update Sun Sep  3 16:42:15 2017 Guillaume Roux
 //
 
 #ifndef PKMN_HPP
@@ -40,7 +40,7 @@ class Charmeleon : public Pokemon
 {
 public:
   Charmeleon() {
-    this->_name = "Charmander";
+    this->_name = "Charmeleon";
     this->_type1 = "Fire";
     this->_pokedexNumber = 5;
     this->_level = BASE_LEVEL;

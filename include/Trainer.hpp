@@ -5,20 +5,21 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sat Sep  2 22:48:02 2017 Guillaume Roux
-// Last update Sun Sep  3 15:09:17 2017 Guillaume Roux
+// Last update Sun Sep  3 16:58:04 2017 Guillaume Roux
 //
 
 #ifndef TRAINER_HPP
 # define TRAINER_HPP
 
 # include <iostream>
+# include <list>
 # include "APokemon.hpp"
 
 class Trainer
 {
 private:
   std::string _name;
-  Pokemon _pkmn[6];
+  std::list<Pokemon> _pkmn;
 
 public:
   Trainer(std::string const name) {
@@ -27,19 +28,20 @@ public:
   virtual ~Trainer(){};
 
   Pokemon & getPokmn(int pos) {
-    return this->_pkmn[pos];
+    std::list<Pokemon>  *it = new std::list<Pokemon> (this->_pkmn);
+
+    for (int i = 0; i < pos; i++)
+      it->pop_front();
+    return it->front();
   };
 
   void  addPkmn(Pokemon const & pkmn) {
-    for (int i = 0; i < 6; i++) {
-      Pokemon *tmp = &(this->_pkmn[i]);
-      if (tmp != NULL) {
-          *tmp = pkmn;
-          std::cout << pkmn.getName() << " is added to your party !" << std::endl;
-          return;
-        }
+    if (this->_pkmn.size() < 6) {
+      this->_pkmn.push_front(pkmn);
+      std::cout << pkmn.getName() << " is added to your party !" << std::endl;
     }
-    std::cout << "Your party is full !" << std::endl;
+    else
+      std::cout << "Your party is full !" << std::endl;
   };
 };
 

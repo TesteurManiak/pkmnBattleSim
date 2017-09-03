@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sat Sep  2 22:44:53 2017 Guillaume Roux
-// Last update Sun Sep  3 16:26:33 2017 Guillaume Roux
+// Last update Sun Sep  3 16:41:16 2017 Guillaume Roux
 //
 
 #ifndef ATTACK_HPP
@@ -70,5 +70,10 @@ public:
     return *this;
   };
 };
+
+std::ostream  &operator<<(std::ostream & os, Attack const & obj)
+{
+  return os << obj.getEffect() << std::endl;
+}
 
 #endif
