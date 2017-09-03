@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sun Sep  3 12:58:41 2017 Guillaume Roux
-// Last update Sun Sep  3 16:42:15 2017 Guillaume Roux
+// Last update Sun Sep  3 17:03:40 2017 Guillaume Roux
 //
 
 #ifndef PKMN_HPP
@@ -14,6 +14,46 @@
 # include <iostream>
 # include "APokemon.hpp"
 # include "Attacks.hpp"
+
+class Bulbasaur : public Pokemon {
+public:
+  Bulbasaur () {
+    this->_name = "Bulbasaur";
+    this->_type1 = "Grass";
+    this->_type2 = "Poison";
+    this->_pokedexNumber = 1;
+    this->_level = BASE_LEVEL;
+    this->_hp = 105;
+    this->_atk = 48;
+    this->_def = 48;
+    this->_spAtk = 63;
+    this->_spDef = 63;
+    this->_speed = 45;
+    this->_attack1 = acid;
+  };
+  virtual ~Bulbasaur (){};
+};
+Bulbasaur bulbasaur;
+
+class Ivysaur : public Pokemon {
+public:
+  Ivysaur () {
+    this->_name = "Ivysaur";
+    this->_type1 = "Grass";
+    this->_type2 = "Poison";
+    this->_pokedexNumber = 2;
+    this->_level = BASE_LEVEL;
+    this->_hp = 120;
+    this->_atk = 60;
+    this->_def = 61;
+    this->_spAtk = 76;
+    this->_spDef = 76;
+    this->_speed = 58;
+    this->_attack1 = acid;
+  };
+  virtual ~Ivysaur (){};
+};
+Ivysaur ivysaur;
 
 class Charmander : public Pokemon
 {
