@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sun Sep  3 12:58:41 2017 Guillaume Roux
-// Last update Sun Sep  3 17:03:40 2017 Guillaume Roux
+// Last update Mon Sep  4 19:11:25 2017 Guillaume Roux
 //
 
 #ifndef PKMN_HPP
@@ -33,7 +33,6 @@ public:
   };
   virtual ~Bulbasaur (){};
 };
-Bulbasaur bulbasaur;
 
 class Ivysaur : public Pokemon {
 public:
@@ -53,7 +52,6 @@ public:
   };
   virtual ~Ivysaur (){};
 };
-Ivysaur ivysaur;
 
 class Charmander : public Pokemon
 {
@@ -74,7 +72,6 @@ public:
   };
   virtual ~Charmander(){};
 };
-Charmander charmander;
 
 class Charmeleon : public Pokemon
 {
@@ -94,7 +91,6 @@ public:
   };
   virtual ~Charmeleon(){};
 };
-Charmeleon  charmeleon;
 
 class Charizard : public Pokemon
 {
@@ -115,6 +111,12 @@ public:
   };
   virtual ~Charizard(){};
 };
+
+// POKEMON
+Bulbasaur bulbasaur;
+Ivysaur ivysaur;
+Charmander charmander;
+Charmeleon  charmeleon;
 Charizard charizard;
 
 #endif

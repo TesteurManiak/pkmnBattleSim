@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sat Sep  2 23:12:15 2017 Guillaume Roux
-// Last update Sun Sep  3 16:34:37 2017 Guillaume Roux
+// Last update Mon Sep  4 19:11:39 2017 Guillaume Roux
 //
 
 #ifndef ATTACKS_HPP
@@ -29,7 +29,6 @@ public:
   };
   virtual ~Ember(){};
 };
-Ember ember;
 
 class Absorb : public Attack {
 public:
@@ -45,7 +44,6 @@ public:
   };
   virtual ~Absorb (){};
 };
-Absorb  absorb;
 
 class Accelerock : public Attack {
 public:
@@ -61,7 +59,6 @@ public:
   };
   virtual ~Accelerock (){};
 };
-Accelerock  accelerock;
 
 class Acid : public Attack {
 public:
@@ -77,6 +74,11 @@ public:
   };
   virtual ~Acid (){};
 };
+
+// ATTACKS
+Ember ember;
+Absorb  absorb;
+Accelerock  accelerock;
 Acid  acid;
 
 #endif

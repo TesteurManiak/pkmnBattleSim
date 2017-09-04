@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sat Sep  2 22:48:02 2017 Guillaume Roux
-// Last update Sun Sep  3 16:58:04 2017 Guillaume Roux
+// Last update Mon Sep  4 19:01:36 2017 Guillaume Roux
 //
 
 #ifndef TRAINER_HPP
@@ -22,7 +22,7 @@ private:
   std::list<Pokemon> _pkmn;
 
 public:
-  Trainer(std::string const name) {
+  Trainer(std::string const name = "") {
     this->_name = name;
   };
   virtual ~Trainer(){};
@@ -43,6 +43,17 @@ public:
     else
       std::cout << "Your party is full !" << std::endl;
   };
+
+  std::string getName() const {
+    return this->_name;
+  };
+
+  void  setName(std::string const &name) {
+    this->_name = name;
+  };
 };
+Trainer player;
+
+void  cmdQuit();
 
 #endif
