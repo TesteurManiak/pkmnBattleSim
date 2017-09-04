@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sat Sep  2 22:35:44 2017 Guillaume Roux
-// Last update Mon Sep  4 19:19:10 2017 Guillaume Roux
+// Last update Mon Sep  4 19:28:13 2017 Guillaume Roux
 //
 
 #include "../include/my.hpp"
@@ -14,13 +14,11 @@ void  chooseName()
 {
   std::string name = "";
 
+  std::cout << "Please choose a trainer name :" << std::endl;
   while (name == "")
-  {
-    std::cout << "Please choose a trainer name :" << std::endl;
     std::cin >> name;
-  }
   player.setName(name);
-  std::cout << "Welcome player : " << player.getName() << std::endl;
+  std::cout << "Welcome player : " << player.getName() << std::endl << "Use the command 'help' to display the command list." << std::endl;
 }
 
 void  cmdManagement()
