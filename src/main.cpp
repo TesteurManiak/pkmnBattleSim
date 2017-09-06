@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sat Sep  2 22:35:44 2017 Guillaume Roux
-// Last update Tue Sep  5 15:54:13 2017 Guillaume Roux
+// Last update Wed Sep  6 14:27:12 2017 Guillaume Roux
 //
 
 #include "../include/my.hpp"
@@ -30,12 +30,10 @@ void  cmdManagement()
     std::cin >> cmd;
     if (cmd == "help")
       std::cout << HELP_MSG << std::endl;
-    else if (strncmp(cmd.c_str(), "addpkmn ", 6) == 0)
+    else if (strncmp(cmd.c_str(), "addpkmn ", 7) == 0)
       player.addPkmn(charmeleon);
     else if (cmd == "pkmnlist")
       std::cout << PKMN_LIST << std::endl;
-    else if (cmd == "quit")
-      cmdQuit();
   }
 }
 

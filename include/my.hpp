@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Mon Sep  4 18:57:11 2017 Guillaume Roux
-// Last update Tue Sep  5 15:51:28 2017 Guillaume Roux
+// Last update Wed Sep  6 14:15:34 2017 Guillaume Roux
 //
 
 #ifndef MY_HPP
@@ -17,6 +17,7 @@
 # include <iostream>
 # include <string>
 # include <cstring>
+# include <vector>
 # include "Attacks.hpp"
 # include "Pkmn.hpp"
 # include "Trainer.hpp"
