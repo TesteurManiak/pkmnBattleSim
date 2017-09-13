@@ -5,7 +5,7 @@
 // Login   <guillaume2.roux@epitech.eu>
 //
 // Started on  Sat Sep  2 23:12:15 2017 Guillaume Roux
-// Last update Mon Sep  4 19:11:39 2017 Guillaume Roux
+// Last update Fri Sep  8 10:35:29 2017 Guillaume Roux
 //
 
 #ifndef ATTACKS_HPP
@@ -42,7 +42,7 @@ public:
     this->_maxPP = 25;
     this->_currentPP = this->_maxPP;
   };
-  virtual ~Absorb (){};
+  virtual ~Absorb(){};
 };
 
 class Accelerock : public Attack {
@@ -57,7 +57,7 @@ public:
     this->_maxPP = 20;
     this->_currentPP = this->_maxPP;
   };
-  virtual ~Accelerock (){};
+  virtual ~Accelerock(){};
 };
 
 class Acid : public Attack {
@@ -72,7 +72,7 @@ public:
     this->_maxPP = 30;
     this->_currentPP = this->_maxPP;
   };
-  virtual ~Acid (){};
+  virtual ~Acid(){};
 };
 
 // ATTACKS
