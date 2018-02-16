@@ -14,9 +14,10 @@ void  chooseName()
 {
   std::string name = "";
 
-  std::cout << "Please choose a trainer name :" << std::endl;
-  while (name == "")
+  while (name == "" || name[0] == '\0') {
+    std::cout << "Please choose a trainer name: ";
     std::cin >> name;
+  }
   player.setName(name);
   std::cout << "Welcome player : " << player.getName() << std::endl << "Use the command 'help' to display the command list." << std::endl;
 }
@@ -27,6 +28,7 @@ void  cmdManagement()
 
   while (cmd != "quit")
   {
+    std::cout << "$> ";
     std::cin >> cmd;
     if (cmd == "help")
       std::cout << HELP_MSG << std::endl;
@@ -34,6 +36,8 @@ void  cmdManagement()
       player.addPkmn(charmeleon);
     else if (cmd == "pkmnlist")
       std::cout << PKMN_LIST << std::endl;
+    else if (cmd != "quit")
+      std::cout << cmd << ": Unknown command" << std::endl;
   }
 }
 
