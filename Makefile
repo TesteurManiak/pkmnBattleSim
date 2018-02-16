@@ -23,13 +23,13 @@ INC=		-I../
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
-		@$(XX) -o $(NAME) $(OBJ) $(INC) $(CXXFLAGS)
+		$(XX) -o $(NAME) $(OBJ) $(INC) $(CXXFLAGS)
 
 clean:
-		@rm -f $(OBJ)
+		rm -f $(OBJ)
 
 fclean:		clean
-		@rm -f $(NAME)
+		rm -f $(NAME)
 
 re:		fclean all
 

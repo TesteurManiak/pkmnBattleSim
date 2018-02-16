@@ -12,6 +12,7 @@
 # define POKEMON_HPP
 
 # include <iostream>
+# include <list>
 # include "AAttack.hpp"
 # include "AObject.hpp"
 # include "AAbility.hpp"
@@ -36,6 +37,7 @@ protected:
 
   Object  _obj;
   Ability _talent;
+  std::list<Attack> _attacks;
   Attack  _attack1, _attack2, _attack3, _attack4;
 public:
   virtual ~Pokemon(){};
