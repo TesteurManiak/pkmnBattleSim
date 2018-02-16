@@ -35,6 +35,10 @@ public:
     return it->front();
   };
 
+  std::list<Pokemon> getPokmn() const {
+    return this->_pkmn;
+  }
+
   void  addPkmn(Pokemon const & pkmn) {
     if (this->_pkmn.size() < 6) {
       this->_pkmn.push_front(pkmn);
@@ -53,7 +57,5 @@ public:
   };
 };
 Trainer player;
-
-void  cmdQuit();
 
 #endif

@@ -10,6 +10,13 @@
 
 #include "../include/my.hpp"
 
+void start_battle()
+{
+  Charmander opponent;
+
+  player.getPokmn(0).attack(opponent, player.getPokmn(0).getAttacks().front());
+}
+
 void  chooseName()
 {
   std::string name = "";
@@ -28,7 +35,6 @@ void  cmdManagement()
 
   while (cmd != "quit")
   {
-    std::cout << "$> ";
     std::cin >> cmd;
     if (cmd == "help")
       std::cout << HELP_MSG << std::endl;
@@ -36,18 +42,18 @@ void  cmdManagement()
       player.addPkmn(charmeleon);
     else if (cmd == "pkmnlist")
       std::cout << PKMN_LIST << std::endl;
-    else if (cmd != "quit")
-      std::cout << cmd << ": Unknown command" << std::endl;
+    else if (cmd == "battle") {
+        if (player.getPokmn().size() != 0)
+          start_battle();
+        else
+          std::cout << "Error: You need at least 1 Pokemon" << '\n';
+    }
   }
 }
 
 int main()
 {
-  Charmander  opponent;
-
   chooseName();
   cmdManagement();
-  //player.addPkmn(bulbasaur);
-  //player.getPokmn(0).attack(opponent, player.getPokmn(0).getAttack1());
   return 0;
 }
