@@ -1,13 +1,3 @@
-//
-// Attacks.hpp for Attacks in /home/guillaume2.roux/Perso/PkmnGame/include/
-//
-// Made by Guillaume Roux
-// Login   <guillaume2.roux@epitech.eu>
-//
-// Started on  Sat Sep  2 23:12:15 2017 Guillaume Roux
-// Last update Fri Sep  8 10:35:29 2017 Guillaume Roux
-//
-
 #ifndef ATTACKS_HPP
 # define ATTACKS_HPP
 

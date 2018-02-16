@@ -1,13 +1,3 @@
-//
-// Trainer.hpp for trainer in /home/guillaume2.roux/Perso/PkmnGame/include/
-//
-// Made by Guillaume Roux
-// Login   <guillaume2.roux@epitech.eu>
-//
-// Started on  Sat Sep  2 22:48:02 2017 Guillaume Roux
-// Last update Mon Sep  4 19:01:36 2017 Guillaume Roux
-//
-
 #ifndef TRAINER_HPP
 # define TRAINER_HPP
 

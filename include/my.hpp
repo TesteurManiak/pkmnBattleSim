@@ -1,13 +1,3 @@
-//
-// my.hpp for my in /home/guillaume2.roux/Perso/PkmnGame/include/
-//
-// Made by Guillaume Roux
-// Login   <guillaume2.roux@epitech.eu>
-//
-// Started on  Mon Sep  4 18:57:11 2017 Guillaume Roux
-// Last update Wed Sep  6 14:15:34 2017 Guillaume Roux
-//
-
 #ifndef MY_HPP
 # define MY_HPP
 

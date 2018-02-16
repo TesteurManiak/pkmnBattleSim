@@ -1,13 +1,3 @@
-//
-// main.cpp for main in /home/guillaume2.roux/Perso/PkmnGame/src/
-//
-// Made by Guillaume Roux
-// Login   <guillaume2.roux@epitech.eu>
-//
-// Started on  Sat Sep  2 22:35:44 2017 Guillaume Roux
-// Last update Wed Sep  6 14:27:12 2017 Guillaume Roux
-//
-
 #include "../include/my.hpp"
 
 void start_battle()

@@ -1,13 +1,3 @@
-//
-// Pkmn.hpp for pkmn in /home/guillaume2.roux/Perso/PkmnGame/include/
-//
-// Made by Guillaume Roux
-// Login   <guillaume2.roux@epitech.eu>
-//
-// Started on  Sun Sep  3 12:58:41 2017 Guillaume Roux
-// Last update Mon Sep  4 19:11:25 2017 Guillaume Roux
-//
-
 #ifndef PKMN_HPP
 # define PKMN_HPP
 

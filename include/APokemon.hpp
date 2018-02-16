@@ -1,13 +1,3 @@
-//
-// Pokemon.hpp for Pokemon in /home/guillaume2.roux/Perso/PkmnGame/include/
-//
-// Made by Guillaume Roux
-// Login   <guillaume2.roux@epitech.eu>
-//
-// Started on  Sat Sep  2 22:36:29 2017 Guillaume Roux
-// Last update Sun Sep  3 15:59:07 2017 Guillaume Roux
-//
-
 #ifndef POKEMON_HPP
 # define POKEMON_HPP
 
