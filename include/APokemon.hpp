@@ -38,7 +38,6 @@ protected:
   Object  _obj;
   Ability _talent;
   std::list<Attack> _attacks;
-  Attack  _attack1, _attack2, _attack3, _attack4;
 public:
   virtual ~Pokemon(){};
 
@@ -86,20 +85,8 @@ public:
     return this->_speed;
   };
 
-  virtual Attack getAttack1() const {
-    return this->_attack1;
-  };
-
-  virtual Attack getAttack2() const {
-    return this->_attack2;
-  };
-
-  virtual Attack getAttack3() const {
-    return this->_attack3;
-  };
-
-  virtual Attack getAttack4() const {
-    return this->_attack4;
+  virtual std::list<Attack> getAttacks() const {
+    return this->_attacks;
   };
 
   virtual void	attack(Pokemon &target, Attack const &atkName) {
@@ -121,10 +108,7 @@ public:
     this->_spAtk = copy.getSpAtk();
     this->_spDef = copy.getSpDef();
     this->_speed = copy.getSpeed();
-    this->_attack1 = copy.getAttack1();
-    this->_attack2 = copy.getAttack2();
-    this->_attack3 = copy.getAttack3();
-    this->_attack4 = copy.getAttack4();
+    this->_attacks = copy.getAttacks();
     return *this;
   };
 

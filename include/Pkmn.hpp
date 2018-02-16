@@ -29,7 +29,7 @@ public:
     this->_spAtk = 63;
     this->_spDef = 63;
     this->_speed = 45;
-    this->_attack1 = acid;
+    this->_attacks.push_back(acid);
   };
   virtual ~Bulbasaur (){};
 };
@@ -48,7 +48,7 @@ public:
     this->_spAtk = 76;
     this->_spDef = 76;
     this->_speed = 58;
-    this->_attack1 = acid;
+    this->_attacks.push_back(acid);
   };
   virtual ~Ivysaur (){};
 };
@@ -68,7 +68,7 @@ public:
     this->_spAtk = 58;
     this->_spDef = 49;
     this->_speed = 63;
-    this->_attack1 = ember;
+    this->_attacks.push_back(ember);
   };
   virtual ~Charmander(){};
 };
@@ -87,7 +87,7 @@ public:
     this->_spAtk = 76;
     this->_spDef = 63;
     this->_speed = 76;
-    this->_attack1 = ember;
+    this->_attacks.push_back(ember);
   };
   virtual ~Charmeleon(){};
 };
@@ -107,7 +107,7 @@ public:
     this->_spAtk = 102;
     this->_spDef = 81;
     this->_speed = 84;
-    this->_attack1 = ember;
+    this->_attacks.push_back(ember);
   };
   virtual ~Charizard(){};
 };
