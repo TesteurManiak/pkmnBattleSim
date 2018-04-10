@@ -62,6 +62,7 @@ public:
     this->_accuracy = 100;
     this->_maxPP = 30;
     this->_currentPP = this->_maxPP;
+    this->_chancesOfEffect = 10;
   };
   virtual ~Acid(){};
 };

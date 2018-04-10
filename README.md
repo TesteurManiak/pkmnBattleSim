@@ -5,3 +5,9 @@ The objective is to first create a textual simulator (a bit like Pokemon Showdow
 I'm working right now on adding new Pokémon and attacks. Then I will add abilities and battle objects.
 
 For the moment you have to modify the 'main.cpp' file in './src/' to test the simulator (I will work on an automated version).
+
+TODO
+- encapsulation of the SFML to make a game engine
+- add more pkmn
+- add more attacks
+- add more abilities
