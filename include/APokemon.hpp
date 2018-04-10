@@ -9,14 +9,22 @@
 
 # define BASE_LEVEL 50
 
+enum State {
+  None,
+  Burn,
+  Poisonned,
+  Paralyzed,
+  Sleep
+ };
+
 class Pokemon
 {
 protected:
   std::string _name;
-  std::string _type1;
-  std::string _type2;
+  Type _type1;
+  Type _type2;
 
-  size_t _pokedexNumber;
+  int _pokedexNumber;
   int _level;
   int _hp;
   int _atk;
@@ -24,6 +32,10 @@ protected:
   int _spAtk;
   int _spDef;
   int _speed;
+  int _EV;
+  int _IV;
+  State _state;
+  bool _confused;
 
   Object  _obj;
   Ability _talent;
@@ -31,54 +43,42 @@ protected:
 public:
   virtual ~Pokemon(){};
 
-  virtual std::string getName() const {
-    return this->_name;
-  };
+  // GET
+  virtual std::string getName() const { return this->_name; };
+  virtual Type getType1() const { return this->_type1; };
+  virtual Type getType2() const { return this->_type2; };
+  virtual int getPokedexNum() const { return this->_pokedexNumber; };
+  virtual int getLevel() const { return this->_level; };
+  virtual int getHp() const { return this->_hp; };
+  virtual int getAtk() const { return this->_atk; };
+  virtual int getDef() const { return this->_def; };
+  virtual int getSpAtk() const { return this->_spAtk; };
+  virtual int getSpDef() const { return this->_spDef; };
+  virtual int getSpeed() const { return this->_speed; };
+  virtual std::list<Attack> getAttacks() const { return this->_attacks; };
+  virtual int getIV() const { return this->_IV; }
+  virtual int getEV() const { return this->_EV; }
+  virtual State getState() const { return this->_state; };
+  virtual bool isConfused() { return this->_confused; };
 
-  virtual std::string getType1() const {
-    return this->_type1;
-  };
+  // SET
+  virtual void setName(std::string const &name) { this->_name = name; };
+  virtual void setType1(Type type) { this->_type1 = type; };
+  virtual void setType2(Type type) { this->_type2 = type; };
+  virtual void setPokedexNum(int num) { this->_pokedexNumber = num; };
+  virtual void setLevel(int lvl) { this->_level = lvl; };
+  virtual void setHp(int hp) { this->_hp = hp; };
+  virtual void setAtk(int atk) { this->_atk = atk; };
+  virtual void setDef(int def) { this->_def = def; };
+  virtual void setSpAtk(int spAtk) { this->_spAtk = spAtk; };
+  virtual void setSpDef(int spDef) { this->_spDef = spDef; };
+  virtual void setSpeed(int speed) { this->_speed = speed; };
+  virtual void setIV(int IV) { this->_IV = IV; };
+  virtual void setEV(int EV) { this->_EV = EV; };
+  virtual void setState(State state) { this->_state = state; };
+  virtual void setConfusion(bool confuse) { this->_confused = confuse; };
 
-  virtual std::string getType2() const {
-    return this->_type2;
-  };
-
-  virtual size_t getPokedexNum() const {
-    return this->_pokedexNumber;
-  };
-
-  virtual int getLevel() const {
-    return this->_level;
-  };
-
-  virtual int getHp() const {
-    return this->_hp;
-  };
-
-  virtual int getAtk() const {
-    return this->_atk;
-  };
-
-  virtual int getDef() const {
-    return this->_def;
-  };
-
-  virtual int getSpAtk() const {
-    return this->_spAtk;
-  };
-
-  virtual int getSpDef() const {
-    return this->_spDef;
-  };
-
-  virtual int getSpeed() const {
-    return this->_speed;
-  };
-
-  virtual std::list<Attack> getAttacks() const {
-    return this->_attacks;
-  };
-
+  // ACTION
   virtual void	attack(Pokemon &target, Attack const &atkName) {
     (void)target;
     std::cout << this->_name << " uses " << atkName.getName() << std::endl;

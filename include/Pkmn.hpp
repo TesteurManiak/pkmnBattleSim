@@ -4,13 +4,14 @@
 # include <iostream>
 # include "APokemon.hpp"
 # include "Attacks.hpp"
+# include "Var.hpp"
 
 class Bulbasaur : public Pokemon {
 public:
   Bulbasaur () {
     this->_name = "Bulbasaur";
-    this->_type1 = "Grass";
-    this->_type2 = "Poison";
+    this->_type1 = Grass;
+    this->_type2 = Poison;
     this->_pokedexNumber = 1;
     this->_level = BASE_LEVEL;
     this->_hp = 105;
@@ -28,8 +29,8 @@ class Ivysaur : public Pokemon {
 public:
   Ivysaur () {
     this->_name = "Ivysaur";
-    this->_type1 = "Grass";
-    this->_type2 = "Poison";
+    this->_type1 = Grass;
+    this->_type2 = Poison;
     this->_pokedexNumber = 2;
     this->_level = BASE_LEVEL;
     this->_hp = 120;
@@ -49,7 +50,7 @@ public:
   Charmander()
   {
     this->_name = "Charmander";
-    this->_type1 = "Fire";
+    this->_type1 = Fire;
     this->_pokedexNumber = 4;
     this->_level = BASE_LEVEL;
     this->_hp = 99;
@@ -68,7 +69,7 @@ class Charmeleon : public Pokemon
 public:
   Charmeleon() {
     this->_name = "Charmeleon";
-    this->_type1 = "Fire";
+    this->_type1 = Fire;
     this->_pokedexNumber = 5;
     this->_level = BASE_LEVEL;
     this->_hp = 118;
@@ -87,8 +88,8 @@ class Charizard : public Pokemon
 public:
   Charizard() {
     this->_name = "Charizard";
-    this->_type1 = "Fire";
-    this->_type2 = "Fly";
+    this->_type1 = Fire;
+    this->_type2 = Fly;
     this->_pokedexNumber = 6;
     this->_level = BASE_LEVEL;
     this->_hp = 138;
@@ -102,7 +103,7 @@ public:
   virtual ~Charizard(){};
 };
 
-// POKEMON
+// CREATE POKEMON
 Bulbasaur bulbasaur;
 Ivysaur ivysaur;
 Charmander charmander;
