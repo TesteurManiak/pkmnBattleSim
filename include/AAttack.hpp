@@ -36,6 +36,7 @@ public:
   virtual void setAcc(int acc) { this->_accuracy = acc; };
   virtual void setMaxPP(int maxPP) { this->_maxPP = maxPP; };
   virtual void setCurrPP(int curr) { this->_currentPP = curr; };
+  virtual void setType(Type type) { this->_type = type; };
   virtual void setTouch(std::string const & touch) { this->_touch = touch; };
   virtual void setEffect(std::string const & effect) { this->_effect = effect; };
 

@@ -56,8 +56,8 @@ public:
   virtual int getSpDef() const { return this->_spDef; };
   virtual int getSpeed() const { return this->_speed; };
   virtual std::list<Attack> getAttacks() const { return this->_attacks; };
-  virtual int getIV() const { return this->_IV; }
-  virtual int getEV() const { return this->_EV; }
+  virtual int getIV() const { return this->_IV; };
+  virtual int getEV() const { return this->_EV; };
   virtual State getState() const { return this->_state; };
   virtual bool isConfused() { return this->_confused; };
 
