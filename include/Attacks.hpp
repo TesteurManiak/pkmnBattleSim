@@ -45,7 +45,7 @@ public:
     this->_name = "Accelerock";
     this->_type = Rock;
     this->_touch = Physical;
-    this->_effect = " The user smashes into the target at high speed. This move always goes first.";
+    this->_effect = "The user smashes into the target at high speed. This move always goes first.";
     this->_power = 40;
     this->_accuracy = 100;
     this->_maxPP = 20;
