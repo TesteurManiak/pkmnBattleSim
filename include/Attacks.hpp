@@ -10,13 +10,14 @@ public:
   {
     this->_name = "Ember";
     this->_type = Fire;
-    this->_touch = "special";
+    this->_touch = Special;
     this->_effect = "The target is attacked with small flames. This may also leave the target with a burn.";
     this->_power = 40;
     this->_accuracy = 100;
     this->_maxPP = 25;
     this->_currentPP = this->_maxPP;
-    this->_chancesOfEffect = 10;
+    this->_chancesOfEffect = 10.0;
+    this->_priority = 0;
   };
   virtual ~Ember(){};
 };
@@ -26,12 +27,14 @@ public:
   Absorb() {
     this->_name = "Absorb";
     this->_type = Grass;
-    this->_touch = "special";
-    this->_effect = "User recovers half the HP inflicted on opponent.";
+    this->_touch = Special;
+    this->_effect = "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.";
     this->_power = 20;
     this->_accuracy = 100;
     this->_maxPP = 25;
     this->_currentPP = this->_maxPP;
+    this->_chancesOfEffect = 0.0;
+    this->_priority = 0;
   };
   virtual ~Absorb(){};
 };
@@ -41,12 +44,14 @@ public:
   Accelerock () {
     this->_name = "Accelerock";
     this->_type = Rock;
-    this->_touch = "physical";
-    this->_effect = "User attacks first.";
+    this->_touch = Physical;
+    this->_effect = " The user smashes into the target at high speed. This move always goes first.";
     this->_power = 40;
     this->_accuracy = 100;
     this->_maxPP = 20;
     this->_currentPP = this->_maxPP;
+    this->_chancesOfEffect = 0.0;
+    this->_priority = 1;
   };
   virtual ~Accelerock(){};
 };
@@ -56,15 +61,50 @@ public:
   Acid () {
     this->_name = "Acid";
     this->_type = Poison;
-    this->_touch = "special";
-    this->_effect = "May lower opponent's Special Defense.";
+    this->_touch = Special;
+    this->_effect = "The opposing Pokémon are attacked with a spray of harsh acid. This may also lower their Sp. Def stat.";
     this->_power = 40;
     this->_accuracy = 100;
     this->_maxPP = 30;
     this->_currentPP = this->_maxPP;
-    this->_chancesOfEffect = 10;
+    this->_chancesOfEffect = 33.2;
+    this->_priority = 0;
   };
   virtual ~Acid(){};
+};
+
+class Pound : public Attack {
+public:
+  Pound () {
+    this->_name = "Pound";
+    this->_type = Normal;
+    this->_touch = Special;
+    this->_effect = "The target is physically pounded with a long tail, a foreleg, or the like.";
+    this->_power = 40;
+    this->_accuracy = 100;
+    this->_maxPP = 35;
+    this->_currentPP = this->_maxPP;
+    this->_chancesOfEffect = 0.0;
+    this->_priority = 0;
+  };
+  virtual Pound(){};
+};
+
+class KarateChop {
+public:
+  KarateChop () {
+    this->_name = "Karate Chop";
+    this->_type = Fighting;
+    this->_touch = Physical;
+    this->_effect = " The target is attacked with a sharp chop. Critical hits land more easily.";
+    this->_power = 50;
+    this->_accuracy = 100;
+    this->_maxPP = 25;
+    this->_currentPP = this->_maxPP;
+    this->_chancesOfEffect = 0.0;
+    this->_priority = 0;
+  };
+  virtual ~KarateChop (){};
 };
 
 // CREATE ATTACKS
@@ -72,5 +112,7 @@ Ember ember;
 Absorb  absorb;
 Accelerock  accelerock;
 Acid  acid;
+Pound pound;
+KarateChop karatechop;
 
 #endif

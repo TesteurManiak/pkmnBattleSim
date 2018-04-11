@@ -8,7 +8,7 @@ enum Type {
   Grass,
   Electrik,
   Ice,
-  Fight,
+  Fighting,
   Poison,
   Ground,
   Flying,

@@ -4,18 +4,25 @@
 # include <iostream>
 # include "Var.hpp"
 
+enum TouchType {
+  None,
+  Physical,
+  Special
+ };
+
 class Attack
 {
 protected:
   std::string _name;
   Type _type;
-  std::string _touch;
+  TouchType _touch;
   std::string _effect;
   int _power;
   int _accuracy;
   int _maxPP;
   int _currentPP;
-  int _chancesOfEffect;
+  float _chancesOfEffect;
+  int _priority;
 
 public:
   virtual ~Attack(){};
@@ -27,8 +34,10 @@ public:
   virtual int getMaxPP() const { return this->_maxPP; };
   virtual int getCurrPP() const { return this->_currentPP; };
   virtual Type getType() const { return this->_type; };
-  virtual std::string getTouch() const { return this->_touch; }
-  virtual std::string getEffect() const { return this->_effect; }
+  virtual TouchType getTouch() const { return this->_touch; };
+  virtual std::string getEffect() const { return this->_effect; };
+  virtual int getPriority() const { return this->_priority; };
+  virtual float getChanceOfEffect() const { return this->_chancesOfEffect; };
 
   // SET
   virtual void setName(std::string const name) { this->_name = name; };
@@ -39,6 +48,8 @@ public:
   virtual void setType(Type type) { this->_type = type; };
   virtual void setTouch(std::string const & touch) { this->_touch = touch; };
   virtual void setEffect(std::string const & effect) { this->_effect = effect; };
+  virtual void setPriority(int prio) { this->_priority = prio; };
+  virtual void setChancesOfEffect(float chance) { this->_chancesOfEffect = chance; };
 
   virtual Attack & operator=(Attack const &copy)
   {
